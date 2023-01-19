@@ -1,8 +1,5 @@
 def hollow_triangle(n):
-    width = n * 2 - 1
-    row = '{{:_^{}}}'.format(width).format
-    return [row(mid(a)) for a in xrange(1, width, 2)] + [width * '#']
+    w, result = 2 * n - 1, [f"{'_' * (2*i-1):#^{2*i+1}}" for i in range(n - 1)]
+    return [f"{l:_^{w}}" for l in result] + ["#" * w]
+    
 
-
-def mid(n):
-    return '#' if n == 1 else '#{}#'.format('_' * (n - 2))
