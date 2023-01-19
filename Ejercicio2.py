@@ -10,5 +10,18 @@ def simplify(poly):
             abridged_monomials[-1][0] += monomial[0]
         else:
             abridged_monomials.append(monomial)
-            
+
+    result = ''
+    for monomial in abridged_monomials:
+        if monomial[0] == -1:
+            result += f"-{monomial[1]}"
+        elif monomial[0] < -1:
+            result += f"{str(monomial[0])}{monomial[1]}"
+        elif monomial[0] == 1:
+            result += f"+{monomial[1]}"
+        elif monomial[0] > 1:
+            result += f"+{str(monomial[0])}{monomial[1]}"
+    return result[1:] if result[0] == '+' else result
+    
+
 
