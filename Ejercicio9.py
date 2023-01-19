@@ -9,4 +9,11 @@ def calcular_lunes(fecha_cumpleanios, fecha_actual):
     lunes = dias_entre_fechas // 7
     return lunes
 
-    
+def numero_lunes(fecha_cumpleanios):
+    hoy = datetime.datetime.now()
+    edad = calcular_edad(fecha_cumpleanios)
+    trabajar = verificar_edad_trabajar(edad)
+    if trabajar:
+        
+
+
