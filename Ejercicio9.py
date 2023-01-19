@@ -14,6 +14,10 @@ def numero_lunes(fecha_cumpleanios):
     edad = calcular_edad(fecha_cumpleanios)
     trabajar = verificar_edad_trabajar(edad)
     if trabajar:
-        
+        lunes = calcular_lunes(fecha_cumpleanios, hoy)
+        return lunes
+    else:
+        return 0
+
 
 
